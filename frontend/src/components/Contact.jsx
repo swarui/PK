@@ -14,7 +14,7 @@ function Contact() {
     };
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/contact", {
+      const response = await fetch("https://phoebekardita12.onrender.com/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
