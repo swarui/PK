@@ -17,11 +17,12 @@ function Contact() {
       const response = await fetch("https://phoebekardita12.onrender.com/contact", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json", // Ensure JSON is correctly specified
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formData), // Convert JavaScript object to JSON
       });
-
+      
+      
       if (response.ok) {
         Swal.fire({
           title: "Thank You",
