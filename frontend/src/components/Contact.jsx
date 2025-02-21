@@ -14,15 +14,14 @@ function Contact() {
     };
 
     try {
-      const response = await fetch("https://phoebekardita12.onrender.com/contact", {
+      const response = await fetch("https://phoebekardita12.onrender.com/", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json", // Ensure JSON is correctly specified
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData), // Convert JavaScript object to JSON
+        body: JSON.stringify(formData),
       });
-      
-      
+
       if (response.ok) {
         Swal.fire({
           title: "Thank You",
