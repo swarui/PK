@@ -14,7 +14,7 @@ function Contact() {
     };
 
     try {
-      const response = await fetch("https://phoebekardita12.onrender.com/contact", {
+      const response = await fetch("https://phoebekardita12.onrender.com/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -91,7 +91,7 @@ function Contact() {
         </h1>
         <h2
           style={{ fontFamily: "Afacad" }}
-          className="text-blue-800 text-base text-center md:text-lg lg:text-x"
+          className="text-blue-700 text-base text-center md:text-lg lg:text-x"
         >
           Reach Out
         </h2>
@@ -165,7 +165,7 @@ function Contact() {
               {/* Message */}
               <div className="flex flex-col w-full">
                 <h2 className="text-base sm:text-lg">
-                  Your Message<span className="text-red-600 ml-1">*</span>
+                  Your Message <span className="text-red-600 ml-1">*</span>
                 </h2>
                 <textarea
                   name="message"
