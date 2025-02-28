@@ -9,20 +9,16 @@ from flask_cors import CORS  # Import CORS
 load_dotenv()  # Load environment variables from .env file
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": ["https://phoebekardita.netlify.app", "http://localhost:5174"]}})
+CORS(app, resources={r"/*": {"origins": ["https://phoebekardita.netlify.app/", "http://localhost:5174"]}})
 
 # Load your email credentials from environment variables
 EMAIL_USER = os.getenv('EMAIL_USER')
 EMAIL_PASS = os.getenv('EMAIL_PASS')
 
 # Root route for health check
-@app.route("/contact", methods=["GET", "POST"])  # ✅ Allows GET & POST
-def contact():
-    if request.method == "GET":
-        return jsonify({"message": "This is the contact endpoint"}), 200
-    data = request.get_json()
-    return jsonify({"message": "Success"}), 200
-
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({"message": "API is working!"}), 200
 
 @app.route("/contact", methods=["POST"])
 def contact():
