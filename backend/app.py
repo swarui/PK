@@ -16,9 +16,13 @@ EMAIL_USER = os.getenv('EMAIL_USER')
 EMAIL_PASS = os.getenv('EMAIL_PASS')
 
 # Root route for health check
-@app.route("/", methods=["GET"])
-def home():
-    return jsonify({"message": "API is working!"}), 200
+@app.route("/contact", methods=["GET", "POST"])  # ✅ Allows GET & POST
+def contact():
+    if request.method == "GET":
+        return jsonify({"message": "This is the contact endpoint"}), 200
+    data = request.get_json()
+    return jsonify({"message": "Success"}), 200
+
 
 @app.route("/contact", methods=["POST"])
 def contact():
