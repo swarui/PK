@@ -20,8 +20,11 @@ EMAIL_PASS = os.getenv('EMAIL_PASS')
 def home():
     return jsonify({"message": "API is working!"}), 200
 
-@app.route("/contact", methods=["POST"])
+@app.route("/contact", methods=["GET", "POST"])
 def contact():
+    if request.method == "GET":
+        return jsonify({"message": "This is the contact endpoint"}), 200  # ✅ Allows GET requests
+
     data = request.json
 
     # Extract the form data from the request
@@ -60,7 +63,6 @@ def contact():
     except Exception as e:
         print("Error:", e)
         return jsonify({"error": "Failed to send email."}), 500
-
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)
