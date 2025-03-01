@@ -2,57 +2,79 @@ import Swal from "sweetalert2";
 import Mocha from "../assets/Kardita2.jpg";
 
 function Contact() {
-  const API_URL = import.meta.env.VITE_API_URL || "https://pk1-xhy3.onrender.com/";
+  const sendEmail = async (e) => {
+    e.preventDefault();
 
-const sendEmail = async (e) => {
-  e.preventDefault();
+    const formData = {
+      firstName: e.target[0].value,
+      lastName: e.target[1].value,
+      email: e.target[2].value,
+      phone: e.target[3].value,
+      message: e.target[4].value,
+    };
 
-  const formData = {
-    firstName: e.target[0].value,
-    lastName: e.target[1].value,
-    email: e.target[2].value,
-    phone: e.target[3].value,
-    message: e.target[4].value,
-  };
-
-  try {
-    const response = await fetch(`${API_URL}/contact`, { 
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-
-    if (response.ok) {
-      Swal.fire({
-        title: "Thank You",
-        text: "Your message was sent successfully",
-        icon: "success",
-        confirmButtonColor: "#3085d6",
-        background: "#000000",
+    try {
+      const response = await fetch("http://127.0.0.1:5000/contact", { 
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
-      e.target.reset();
-    } else {
+      
+      if (response.ok) {
+        Swal.fire({
+          title: "Thank You",
+          text: "Your message was sent successfully ",
+          icon: "success",
+          confirmButtonColor: "#3085d6",
+          background: "#000000",
+          customClass: {
+            popup: "custom-popup",
+            title: "custom-title",
+            content: "custom-content",
+            text: "text-custom",
+            confirmButton: "custom-button",
+            icon: "icon-custom",
+          },
+        });
+
+        e.target.reset();
+      } else {
+        Swal.fire({
+          title: "Error!",
+          text: "Failed to send message. Please try again.",
+          icon: "error",
+          confirmButtonColor: "#d33",
+          background: "#000000",
+          customClass: {
+            popup: "custom-popup",
+            title: "custom-title",
+            content: "custom-content",
+            confirmButton: "custom-button",
+            text: "text-custom",
+          },
+        });
+      }
+    } catch (error) {
       Swal.fire({
         title: "Error!",
-        text: "Failed to send message. Please try again.",
+        text: "An unexpected error occurred. Please try again.",
         icon: "error",
         confirmButtonColor: "#d33",
-        background: "#000000",
+        background: "#f4f4f9",
+        customClass: {
+          popup: "custom-popup",
+          title: "custom-title",
+          content: "custom-content",
+          confirmButton: "custom-button",
+          text: "text-custom",
+          icon: "custom-icon",
+        },
       });
+      console.error("Error:", error);
     }
-  } catch (error) {
-    Swal.fire({
-      title: "Error!",
-      text: "An unexpected error occurred. Please try again.",
-      icon: "error",
-      confirmButtonColor: "#d33",
-      background: "#f4f4f9",
-    });
-    console.error("Error:", error);
-  }
-};
+  };
 
   return (
     <div
