@@ -68,7 +68,7 @@ function Navbar() {
 
 
         {/* Desktop Navbar */}
-        <nav className="hidden lg:flex items-center justify-center flex-1">
+        <nav className="hidden ml-15 lg:flex items-center justify-center flex-1">
           <ul
             style={{ fontFamily: "Afacad" }}
             className="flex flex-row gap-4 xl:gap-5 text-base xl:text-[1.1em] cursor-pointer"
@@ -77,7 +77,7 @@ function Navbar() {
               <a href="#home" className="px-2 py-1">
                 Home
               </a>
-            </li>
+            </li>d
             <li className="hover:text-sky-700 transition-colors">
               <a href="#about" className="px-2 py-1">
                 About
@@ -103,12 +103,14 @@ function Navbar() {
 
         {/* Email Me Button */}
         <div className="hidden lg:block">
-          <button
-            style={{ fontFamily: "Afacad" }}
-            className="bg-black text-white transition duration-500 hover:bg-sky-700 rounded-full px-5 py-2 shadow-lg text-[0.945em]"
-          >
-            Email Me
-          </button>
+        <a
+  href="phoebekardita@gmail.com"
+  style={{ fontFamily: "Afacad" }}
+  className="bg-black text-white transition duration-500 hover:bg-sky-700 rounded-full px-5 py-2 shadow-lg text-[0.945em] inline-block"
+>
+  Email Me
+</a>
+
         </div>
       </div>
 

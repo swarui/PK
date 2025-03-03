@@ -4,10 +4,10 @@ import Kardita3 from "../assets/Kardita3.webp"
 
 function Home() {
   return (
-    <div id="home" className="min-h-screen flex items-center justify-center">
+    <div id="home" className="  min-h-screen flex items-center justify-center">
       <div className="flex sm:flex-row flex-col w-full max-w-screen-xl px-4 sm:px-6">
         {/* Left Text Body */}
-        <div className="w-full sm:w-1/2 flex flex-col justify-center items-center space-y-4 sm:space-y-5">
+        <div className="w-full mt-10 sm:w-1/2 flex flex-col justify-center items-center space-y-4 sm:space-y-5">
           <h1
             style={{ fontFamily: "Arsenica", fontWeight: "500" }}
             className="xl:text-8xl lg:text-7xl sm:text-6xl text-4xl text-black"
@@ -54,9 +54,9 @@ function Home() {
         </div>
 
         {/* Image Body */}
-        <div className="w-full sm:w-1/2 flex items-center justify-center sm:justify-end mt-8 sm:mt-0">
+        <div className=" w-full sm:w-1/2 flex items-center justify-center sm:justify-end mt-10 sm:mt-0">
           <img
-            className="w-[95%] sm:w-[400px] lg:w-[500px] h-auto object-contain"
+            className="mt-10 w-[95%] sm:w-[400px] lg:w-[500px] h-auto object-contain"
             src={Kardita3 || "/placeholder.svg"}
             loading="lazy"
             alt="Phoebe"
