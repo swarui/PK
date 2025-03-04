@@ -107,7 +107,7 @@ function Navbar() {
         {/* Email Me Button */}
         <div className="hidden lg:block">
         <a
-  href="phoebekardita@gmail.com"
+  href="mailto:phoebekardita@gmail.com"
   style={{ fontFamily: "Afacad" }}
   className="bg-black text-white transition duration-500 hover:bg-sky-700 rounded-full px-5 py-2 shadow-lg text-[0.945em] inline-block"
 >
