@@ -58,7 +58,6 @@ function Home() {
           <img
             className="mt-10 w-[95%] sm:w-[400px] lg:w-[500px] h-auto object-contain"
             src={Kardita3 || "/placeholder.svg"}
-            loading="lazy"
             alt="Phoebe"
           />
         </div>

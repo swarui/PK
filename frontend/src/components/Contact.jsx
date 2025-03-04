@@ -1,5 +1,6 @@
 import Swal from "sweetalert2";
 import Mocha from "../assets/Kardita2.jpg";
+import six from '../assets/six.png'
 
 function Contact() {
   const sendEmail = async (e) => {

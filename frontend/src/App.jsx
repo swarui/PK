@@ -5,7 +5,7 @@ import Experience from "./components/Experience"
 import Travelgallery from "./components/Travelgallery"
 import Contact from "./components/Contact"
 const bgColor = {
-  background: "#F0F9F8",
+  background: "#e7eaf6",
 };
 
 function App() {
