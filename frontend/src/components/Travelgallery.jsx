@@ -1,6 +1,9 @@
 import One from "../assets/one.jpeg";
 import Two from "../assets/two.jpeg";
-import Four from "../assets/four.jpeg";
+// import Four from "../assets/four.jpeg";
+import Four from "../assets/four.png";
+// import Three from "../assets/three.jpg"
+
 import Five from "../assets/five.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
