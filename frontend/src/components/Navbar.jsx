@@ -77,7 +77,7 @@ function Navbar() {
               <a href="#home" className="px-2 py-1">
                 Home
               </a>
-            </li>d
+            </li>
             <li className="hover:text-sky-700 transition-colors">
               <a href="#about" className="px-2 py-1">
                 About
