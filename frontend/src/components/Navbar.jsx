@@ -44,9 +44,12 @@ function Navbar() {
         } ${isOpen ? "bg-transparent" : "bg-red"}`}
       >
         {/* Logo */}
-        <div style={{ fontFamily: "Arsenica" }} className="text-2xl md:text-[1.9em] font-medium text-black">
-          PK
-        </div>
+        <a href="https://phoebekardita.netlify.app" rel="noopener noreferrer">
+  <div style={{ fontFamily: "Arsenica" }} className="text-2xl md:text-[1.9em] font-medium text-black cursor-pointer">
+    PK
+  </div>
+</a>
+
 
         {/* Hamburger Icon */}
        {/* Hamburger Icon */}
