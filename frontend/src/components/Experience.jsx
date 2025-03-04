@@ -48,14 +48,17 @@ function Experience() {
             >
               <CardHeader color="light-blue" className="text-black p-2  ">
                 <Typography
-                  className="text-sm md:text-base lg:text-lg "
-                  variant="h5"
+                style={{fontFamily:'Afacad'}}
+                  className="mt-2 text-base md:text-lg lg:text-x font-medium "
+                  variant=""
                   color="black"
                 >
                   Sarova Maiyan, Nanyuki
                 </Typography>
                 <div className="flex justify-between">
                   <Typography
+                                  style={{fontFamily:'Afacad'}}
+
                     variant="subtitle1"
                     color="white"
                     className="opacity-80 text-blue-800 text-sm md:text-base lg:text-lg "
@@ -63,6 +66,8 @@ function Experience() {
                     Attachment Intern
                   </Typography>
                   <Typography
+                                  style={{fontFamily:'Afacad'}}
+
                     variant="subtitle2"
                     color="white"
                     className="opacity-70 text-xs md:text-sm lg:text-base   text-blue-800 flex items-center gap-2"
@@ -101,14 +106,18 @@ function Experience() {
             >
               <CardHeader color="light-blue" className="text-black p-2  ">
                 <Typography
-                  className="text-sm md:text-base lg:text-lg "
-                  variant="h5"
+                                style={{fontFamily:'Afacad'}}
+
+                  className=" mt-2 text-base md:text-lg lg:text-x font-medium  "
+                  // variant="h5"
                   color="black"
                 >
                   Enashipai Resort and Spa
                 </Typography>
                 <div className="flex justify-between">
                   <Typography
+                                  style={{fontFamily:'Afacad'}}
+
                     variant="subtitle1"
                     color="white"
                     className="opacity-80 text-blue-800 text-sm md:text-base lg:text-lg "
@@ -116,6 +125,8 @@ function Experience() {
                     Waitress{" "}
                   </Typography>
                   <Typography
+                                  style={{fontFamily:'Afacad'}}
+
                     variant="subtitle2"
                     color="white"
                     className="opacity-70 text-xs md:text-sm lg:text-base   text-blue-800 flex items-center gap-2"
@@ -150,14 +161,17 @@ function Experience() {
             >
               <CardHeader color="light-blue" className="text-black p-2  ">
                 <Typography
-                  className="text-sm md:text-base lg:text-lg "
-                  variant="h5"
+                                style={{fontFamily:'Afacad'}}
+
+                  className=" mt-2 text-base md:text-lg lg:text-x font-medium "
                   color="black"
                 >
                   Astorian Grand Hotel{" "}
                 </Typography>
                 <div className="flex justify-between">
                   <Typography
+                                  style={{fontFamily:'Afacad'}}
+
                     variant="subtitle1"
                     color="white"
                     className="opacity-80 text-blue-800 text-sm md:text-base lg:text-lg "
@@ -165,6 +179,8 @@ function Experience() {
                     Room attendant{" "}
                   </Typography>
                   <Typography
+                                  style={{fontFamily:'Afacad'}}
+
                     variant="subtitle2"
                     color="white"
                     className="opacity-70 text-xs md:text-sm lg:text-base   text-blue-800 flex items-center gap-2"
@@ -194,14 +210,18 @@ function Experience() {
             >
               <CardHeader color="light-blue" className="text-black p-2  ">
                 <Typography
-                  className="text-sm md:text-base lg:text-lg "
-                  variant="h5"
+                                style={{fontFamily:'Afacad'}}
+
+                  className=" mt-2 text-base md:text-lg lg:text-x font-medium  "
+                  // variant="h5"
                   color="black"
                 >
                   Wehai Construction Company
                 </Typography>
                 <div className="flex justify-between">
                   <Typography
+                                  style={{fontFamily:'Afacad'}}
+
                     variant="subtitle1"
                     color="white"
                     className="opacity-80 text-blue-800 text-sm md:text-base lg:text-lg "
@@ -209,9 +229,11 @@ function Experience() {
                     Road Construction{" "}
                   </Typography>
                   <Typography
+                                  style={{fontFamily:'Afacad'}}
+
                     variant="subtitle2"
                     color="white"
-                    className="opacity-70 text-xs md:text-sm lg:text-base   text-blue-800 flex items-center gap-2"
+                    className="opacity-70 text-xs md:text-sm lg:text-base    text-blue-800 flex items-center gap-2"
                   >
                     <FaCalendar />
                     May 2020 – Nov 2020{" "}
@@ -245,14 +267,18 @@ function Experience() {
             >
               <CardHeader color="light-blue" className="text-black p-2  ">
                 <Typography
-                  className="text-sm md:text-base lg:text-lg "
-                  variant="h5"
+                                style={{fontFamily:'Afacad'}}
+
+                  className="text-base md:text-lg lg:text-x  font-medium mt-2 "
+                  // variant="h5"
                   color="black"
                 >
                   Mt Kenya National Park{" "}
                 </Typography>
                 <div className="flex justify-between">
                   <Typography
+                                  style={{fontFamily:'Afacad'}}
+
                     variant="subtitle1"
                     color="white"
                     className="opacity-80 text-blue-800 text-sm md:text-base lg:text-lg "
@@ -260,11 +286,14 @@ function Experience() {
                     Tourist Intern{" "}
                   </Typography>
                   <Typography
+                                  style={{fontFamily:'Afacad'}}
+
                     variant="subtitle2"
                     color="white"
                     className="opacity-70 text-xs md:text-sm lg:text-base   text-blue-800 flex items-center gap-2"
                   >
                     <FaCalendar />
+                    
                     Jan 2020 – March 2020{" "}
                   </Typography>
                 </div>
