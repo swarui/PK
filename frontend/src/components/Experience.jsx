@@ -107,10 +107,11 @@ function ExperienceCard({ experience, index, isVisible }) {
           <div className="flex items-start">
             {/* <Briefcase className="mr-3 text-blue-500 mt-1 flex-shrink-0" size={22} /> */}
             {/* Reduced heading size */}
-            <h3 className="text-xl md:text-2xl sm:text-xl font-semibold text-gray-800">{experience.company}</h3>
+            <h3 className="text-lg md:text-lg sm:text-base font-medium text-gray-800">
+            {experience.company}</h3>
           </div>
 
-          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mt-3">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mt-1">
             <p className="text-blue-600 font-medium text-base md:text-lg">{experience.position}</p>
             <div className="flex items-center text-gray-500 text-sm mt-2 sm:mt-0">
               <Calendar size={16} className="mr-2" />
@@ -164,7 +165,7 @@ function Experience() {
   return (
     <section
       id="experience"
-      className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-gradient-to-b from-white to-blue-50/30 py-16"
+      className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden py-16"
     >
       {/* Background decorative elements with parallax effect */}
       <motion.div

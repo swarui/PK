@@ -28,10 +28,10 @@ function Home() {
   return (
     <section
       id="home"
-      className="min-h-screen mt-10 flex flex-col items-center justify-center relative overflow-hidden"
+      className="h-screen w-full lg:mt-10 flex flex-col items-center justify-center relative overflow-hidden md:h-screen "
     >
       {/* Main container - improved tablet responsiveness */}
-      <div className="flex flex-col sm:flex-row md:flex-row w-full max-w-screen-xl mx-auto px-6 sm:px-10 md:px-8 lg:px-10 py-10 sm:py-6 md:py-0 gap-8 sm:gap-6 md:gap-4">
+      <div className="flex flex-col sm:flex-row md:flex-row w-full h-full max-w-screen-xl mx-auto px-6 sm:px-10 md:px-8 lg:px-10 py-10 sm:py-6 md:py-0 gap-8 sm:gap-6 md:gap-4">
         {/* Left Text Body - improved tablet layout */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}

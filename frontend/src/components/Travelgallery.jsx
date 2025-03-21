@@ -1,20 +1,20 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { motion } from "framer-motion"
-import { ExternalLink, MapPin } from "lucide-react"
-import One from "../assets/one.jpeg"
-import Two from "../assets/two.jpeg"
-import Four from "../assets/four.jpeg"
-import Five from "../assets/five.jpg"
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { ExternalLink, MapPin } from "lucide-react";
+import One from "../assets/one.jpeg";
+import Two from "../assets/two.jpeg";
+import Four from "../assets/four.jpeg";
+import Five from "../assets/five.jpg";
 
 function TravelGallery() {
-  const [isVisible, setIsVisible] = useState(false)
-  const [selectedImage, setSelectedImage] = useState(null)
+  const [isVisible, setIsVisible] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
-    setIsVisible(true)
-  }, [])
+    setIsVisible(true);
+  }, []);
 
   const images = [
     {
@@ -29,7 +29,8 @@ function TravelGallery() {
       alt: "Wildlife Research & Training Institute",
       location: "Wildlife Research & Training Institute",
       url: "https://www.wrti.go.ke",
-      description: "Wildlife Research & Training Institute with Dr. Alfred Mutua and colleagues.",
+      description:
+        "Wildlife Research & Training Institute with Dr. Alfred Mutua and colleagues.",
     },
     {
       src: Four,
@@ -45,7 +46,7 @@ function TravelGallery() {
       url: "https://en.wikipedia.org/wiki/Mount_Kenya",
       description: "At the peak of Mount Kenya",
     },
-  ]
+  ];
 
   return (
     <section
@@ -108,40 +109,38 @@ function TravelGallery() {
                   />
 
                   {/* Location Badge with Link */}
-                {/* Location Badge with Link */}
-<div className="absolute bottom-3 left-3 z-20 flex items-center">
-  <div className="flex items-center bg-white/90 backdrop-blur-sm px-2 py-1 rounded-l-full shadow-sm">
-    <MapPin size={14} className="text-blue-600 mr-1" />
-    <p
-      style={{ fontFamily: "Afacad" }}
-      className="text-xs font-medium text-gray-800"
-    >
-      {image.location}
-    </p>
-  </div>
+                  {/* Location Badge with Link */}
+                  <div className="absolute bottom-3 left-3 z-20 flex items-center">
+                    <div className="flex items-center bg-white/90 backdrop-blur-sm px-2 py-1 rounded-l-full shadow-sm">
+                      <MapPin size={14} className="text-blue-600 mr-1" />
+                      <p
+                        style={{ fontFamily: "Afacad" }}
+                        className="text-xs font-medium text-gray-800"
+                      >
+                        {image.location}
+                      </p>
+                    </div>
 
                     <a
-  href={image.url}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="bg-blue-400/80 backdrop-blur-sm p-1 rounded-full shadow-sm hover:bg-blue-500/80 transition-colors duration-300"
->
-  <ExternalLink size={12} className="text-white" />
-</a>
-
+                      href={image.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-blue-400/80 backdrop-blur-sm p-1 rounded-full shadow-sm hover:bg-blue-500/80 transition-colors duration-300"
+                    >
+                      <ExternalLink size={12} className="text-white" />
+                    </a>
                   </div>
                 </div>
 
                 {/* Description */}
                 <div className="p-3 bg-white rounded-md shadow-sm">
-  <p
-    style={{ fontFamily: "Afacad" }}
-    className="text-sm md:text-base text-gray-700"
-  >
-    {image.description}
-  </p>
-</div>
-
+                  <p
+                    style={{ fontFamily: "Afacad" }}
+                    className="text-sm md:text-base text-gray-700"
+                  >
+                    {image.description}
+                  </p>
+                </div>
               </div>
 
               {/* Decorative Element */}
@@ -195,8 +194,7 @@ function TravelGallery() {
         </motion.div>
       )}
     </section>
-  )
+  );
 }
 
-export default TravelGallery
-
+export default TravelGallery;
