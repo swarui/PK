@@ -55,22 +55,23 @@ function About() {
         <div className="flex md:flex-row flex-col w-full gap-8 md:gap-4">
           {/* Image Section - matching home's responsive approach */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -50 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="w-full md:w-1/2 flex items-center justify-center md:justify-center relative"
-          >
-            <div className="absolute w-[80%] h-[80%] bg-blue-100 rounded-full opacity-50 blur-3xl -z-10" />
-            <div className="relative">
-              <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-blue-200/50 -z-10" />
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full bg-blue-300/40 -z-10" />
-              <img
-                className="w-[90%] md:w-[400px] lg:w-[500px] h-auto object-contain rounded-2xl shadow-xl"
-                src={Kardita4 || "/placeholder.svg"}
-                alt="Phoebe"
-              />
-            </div>
-          </motion.div>
+  initial={{ opacity: 0, x: -50 }}
+  animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -50 }}
+  transition={{ duration: 0.8, delay: 0.2 }}
+  className="w-full md:w-1/2 flex items-center justify-center relative"
+>
+  <div className="absolute w-[80%] h-[80%] bg-blue-100 rounded-full opacity-50 blur-3xl -z-10" />
+  <div className="relative flex items-center justify-center w-full">
+    <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-blue-200/50 -z-10" />
+    <div className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full bg-blue-300/40 -z-10" />
+    <img
+      className="w-[95%] md:w-[400px] lg:w-[500px] h-auto object-contain rounded-2xl shadow-xl"
+      src={Kardita4 || "/placeholder.svg"}
+      alt="Phoebe"
+    />
+  </div>
+</motion.div>
+
 
           {/* Text Section - matching home's responsive approach */}
           <motion.div
