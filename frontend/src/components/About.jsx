@@ -27,7 +27,7 @@ function About() {
   return (
     <section
       id="about"
-      className="min-h-screen py-16 md:py-20 px-6 md:px-8 lg:px-10 scroll-mt-20 relative overflow-hidden bg-gradient-to-b from-white to-blue-50/30"
+      className="min-h-screen py-16 md:py-20 px-6 md:px-8 lg:px-10 scroll-mt-20 relative overflow-hidden "
     >
       {/* Background decorative elements - matching home */}
       <div className="absolute top-40 left-10 w-64 h-64 bg-blue-100/30 rounded-full blur-3xl -z-10 hidden lg:block" />
