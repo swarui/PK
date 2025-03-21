@@ -50,7 +50,7 @@ function TravelGallery() {
   return (
     <section
       id="travelgallery"
-      className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-gradient-to-b from-white to-blue-50/30 py-16"
+      className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden  py-16"
     >
       {/* Background decorative elements */}
       <div className="absolute top-20 left-10 w-64 h-64 bg-blue-100/30 rounded-full blur-3xl -z-10 hidden lg:block" />
