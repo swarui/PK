@@ -93,7 +93,7 @@ function ExperienceCard({ experience, index, isVisible }) {
       initial="hidden"
       animate={controls}
       variants={variants}
-      className="relative w-full md:w-3/4 mx-auto mb-12 md:mb-16" // Adjusted bottom margin
+      className="relative w-full md:w-3/4 mx-auto mb-12 md:mb-1" // Adjusted bottom margin
     >
       {/* Card */}
       <div

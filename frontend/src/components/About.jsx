@@ -60,7 +60,7 @@ function About() {
   transition={{ duration: 0.8, delay: 0.2 }}
   className="w-full md:w-1/2 flex items-center justify-center relative"
 >
-  <div className="absolute w-[80%] h-[80%] bg-blue-100 rounded-full opacity-50 blur-3xl -z-10" />
+  <div className="absolute w-[80%] h-[80%] rounded-full opacity-50 blur-3xl -z-10" />
   <div className="relative flex items-center justify-center w-full">
     <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-blue-200/50 -z-10" />
     <div className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full bg-blue-300/40 -z-10" />
