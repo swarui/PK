@@ -28,7 +28,7 @@ function Home() {
   return (
     <section
       id="home"
-      className="min-h-screen mt-10 flex flex-col items-center justify-center relative overflow-hidden bg-gradient-to-b from-white to-blue-50/30"
+      className="min-h-screen mt-10 flex flex-col items-center justify-center relative overflow-hidden"
     >
       {/* Main container - improved tablet responsiveness */}
       <div className="flex flex-col sm:flex-row md:flex-row w-full max-w-screen-xl mx-auto px-6 sm:px-10 md:px-8 lg:px-10 py-10 sm:py-6 md:py-0 gap-8 sm:gap-6 md:gap-4">
