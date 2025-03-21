@@ -105,9 +105,9 @@ function ExperienceCard({ experience, index, isVisible }) {
 
         <div className="mb-5">
           <div className="flex items-start">
-            <Briefcase className="mr-3 text-blue-500 mt-1 flex-shrink-0" size={22} />
+            {/* <Briefcase className="mr-3 text-blue-500 mt-1 flex-shrink-0" size={22} /> */}
             {/* Reduced heading size */}
-            <h3 className="text-xl md:text-2xl font-semibold text-gray-800">{experience.company}</h3>
+            <h3 className="text-xl md:text-2xl sm:text-xl font-semibold text-gray-800">{experience.company}</h3>
           </div>
 
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mt-3">

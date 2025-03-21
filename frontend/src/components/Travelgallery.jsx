@@ -108,30 +108,40 @@ function TravelGallery() {
                   />
 
                   {/* Location Badge with Link */}
-                  <div className="absolute bottom-4 left-4 z-20 flex items-center">
-                    <div className="flex items-center bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-l-full shadow-sm">
-                      <MapPin size={16} className="text-blue-600 mr-1.5" />
-                      <p style={{ fontFamily: "Afacad" }} className="text-sm font-medium text-gray-800">
-                        {image.location}
-                      </p>
-                    </div>
+                {/* Location Badge with Link */}
+<div className="absolute bottom-3 left-3 z-20 flex items-center">
+  <div className="flex items-center bg-white/90 backdrop-blur-sm px-2 py-1 rounded-l-full shadow-sm">
+    <MapPin size={14} className="text-blue-600 mr-1" />
+    <p
+      style={{ fontFamily: "Afacad" }}
+      className="text-xs font-medium text-gray-800"
+    >
+      {image.location}
+    </p>
+  </div>
+
                     <a
-                      href={image.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-blue-400/90 backdrop-blur-sm p-1.5 rounded-r-full shadow-sm hover:bg-blue-500/90 transition-colors duration-300"
-                    >
-                      <ExternalLink size={16} className="text-white" />
-                    </a>
+  href={image.url}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-blue-400/80 backdrop-blur-sm p-1 rounded-full shadow-sm hover:bg-blue-500/80 transition-colors duration-300"
+>
+  <ExternalLink size={12} className="text-white" />
+</a>
+
                   </div>
                 </div>
 
                 {/* Description */}
-                <div className="p-4 bg-white">
-                  <p style={{ fontFamily: "Afacad" }} className="text-base md:text-lg text-gray-700">
-                    {image.description}
-                  </p>
-                </div>
+                <div className="p-3 bg-white rounded-md shadow-sm">
+  <p
+    style={{ fontFamily: "Afacad" }}
+    className="text-sm md:text-base text-gray-700"
+  >
+    {image.description}
+  </p>
+</div>
+
               </div>
 
               {/* Decorative Element */}
