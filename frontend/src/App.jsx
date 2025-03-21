@@ -5,7 +5,7 @@ import Experience from "./components/Experience"
 import Travelgallery from "./components/Travelgallery"
 import Contact from "./components/Contact"
 const bgColor = {
-  background: "#e7eaf6",
+  background: "linear-gradient(to bottom, #ffffff, #f0f2f5)"
 };
 
 function App() {
