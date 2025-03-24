@@ -4,6 +4,7 @@ import About from "./components/About"
 import Experience from "./components/Experience"
 import Travelgallery from "./components/Travelgallery"
 import Contact from "./components/Contact"
+import Footer from "./components/Footer"
 const bgColor = {
   background: "linear-gradient(to bottom, #ffffff, #f0f2f5)"
 };
@@ -17,6 +18,7 @@ function App() {
       <Experience />
       <Travelgallery />
       <Contact />
+      <Footer/>
     </div>
   );
 }
