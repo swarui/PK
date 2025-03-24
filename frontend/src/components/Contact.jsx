@@ -87,12 +87,24 @@ function Contact() {
             <p className="text-black/80 mb-6" style={{ fontFamily: "Afacad" }}>Let's connect! Reach out through the form or social media.</p>
 
             <div className="flex gap-3 mb-6">
-              {[Mail, Phone, Linkedin, Instagram, Twitter].map((Icon, index) => (
-                <a key={index} href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100/80 hover:bg-blue-200 transition-colors duration-300">
-                  <Icon size={18} className="text-blue-600" />
-                </a>
-              ))}
-            </div>
+  {[
+    { Icon: Mail, link: "mailto:phoebekardita@gmail.com" },
+    { Icon: Linkedin, link: "https://linkedin.com/in/yourprofile" },
+    { Icon: Instagram, link: "https://instagram.com/yourprofile" },
+    { Icon: Twitter, link: "https://twitter.com/yourprofile" },
+  ].map(({ Icon, link }, index) => (
+    <a
+      key={index}
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100/80 hover:bg-blue-200 transition-colors duration-300"
+    >
+      <Icon size={18} className="text-blue-600" />
+    </a>
+  ))}
+</div>
+
 
             <form onSubmit={sendEmail} className="w-full space-y-4" style={{ fontFamily: "Afacad" }}>
               <div className="flex flex-col sm:flex-row gap-4">

@@ -60,32 +60,20 @@ function TravelGallery() {
       <div className="w-full max-w-screen-xl px-6 md:px-8 lg:px-10">
         {/* Header Section */}
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -20 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-8 sm:mb-10"
         >
-          <div className="relative inline-block">
-            <h1
-              style={{ fontFamily: "Arsenica", fontWeight: "500" }}
-              className="text-4xl md:text-5xl lg:text-6xl text-black"
-            >
-              Travel Gallery
-            </h1>
-            <div className="absolute -top-4 -right-6 w-12 h-12 rounded-full bg-blue-100 -z-10 hidden md:block" />
-          </div>
-          <motion.h2
-            initial={{ opacity: 0 }}
-            animate={{ opacity: isVisible ? 1 : 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            style={{ fontFamily: "Afacad" }}
-            className="text-blue-800 text-base md:text-lg lg:text-xl mt-2"
+          <h1
+            style={{ fontFamily: "Arsenica" }}
+            className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-black relative inline-block"
           >
-            <span className="relative inline-block">
-              Work Visits
-              <span className="absolute bottom-0 left-0 w-full h-2 bg-blue-200/50 -z-10 transform -rotate-1"></span>
-            </span>
-          </motion.h2>
+            Travel Gallery <span className="text-blue-400">:)</span>
+            <span className="absolute bottom-2 left-0 w-full h-2 bg-blue-200/50 -z-10 transform -rotate-1"></span>
+          </h1>
+          <h2 style={{ fontFamily: "Afacad" }} className="text-blue-800 text-base lg:text-lg mt-2">
+Work Visits          </h2>
         </motion.div>
 
         {/* Gallery Grid */}
