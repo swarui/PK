@@ -9,22 +9,26 @@ import Mocha from "../assets/Kardita2.jpg";
 function Contact() {
   const [isVisible, setIsVisible] = useState(false);
   const [isSending, setIsSending] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
   const sendEmail = async (e) => {
     e.preventDefault();
     setIsSending(true);
-
-    const formData = {
-      firstName: e.target[0].value,
-      lastName: e.target[1].value,
-      email: e.target[2].value,
-      phone: e.target[3].value,
-      message: e.target[4].value,
-    };
 
     try {
       const response = await fetch("http://127.0.0.1:5000/contact", {
@@ -35,55 +39,34 @@ function Contact() {
 
       if (response.ok) {
         Swal.fire({
-          position: "top-end",
           title: "Success!",
           text: "Your message was sent successfully.",
           icon: "success",
-          confirmButtonColor: "#3085d6",
-          background: "#4CAF50",
-          customClass: {
-            popup: "text-[14px] p-4 font-[Afacad]",
-            title: "font-[Afacad]",
-            content: "font-[Afacad]",
-            confirmButton: "bg-white text-green-600",
-          },
-          timer: 2500,
+          toast: true,
+          position: "top-end",
+          timer: 2000,
           showConfirmButton: false,
         });
-        e.target.reset();
+        setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
       } else {
         Swal.fire({
-          position: "top-end",
           title: "Error!",
           text: "Failed to send message. Please try again.",
           icon: "error",
-          confirmButtonColor: "#d33",
-          background: "#4CAF50",
-          customClass: {
-            popup: "text-[14px] p-4 font-[Afacad]",
-            title: "font-[Afacad]",
-            content: "font-[Afacad]",
-            confirmButton: "bg-white text-red-600",
-          },
-          timer: 2500,
+          toast: true,
+          position: "top-end",
+          timer: 2000,
           showConfirmButton: false,
         });
       }
     } catch (error) {
       Swal.fire({
-        position: "top-end",
         title: "Error!",
-        text: "An unexpected error occurred. Please try again.",
+        text: "Something went wrong. Please try again later.",
         icon: "error",
-        confirmButtonColor: "#d33",
-        background: "#4CAF50",
-        customClass: {
-          popup: "text-[14px] p-4 font-[Afacad]",
-          title: "font-[Afacad]",
-          content: "font-[Afacad]",
-          confirmButton: "bg-white text-red-600",
-        },
-        timer: 2500,
+        toast: true,
+        position: "top-end",
+        timer: 2000,
         showConfirmButton: false,
       });
       console.error("Error:", error);
@@ -91,7 +74,6 @@ function Contact() {
       setIsSending(false);
     }
   };
-
 
   return (
     <section
@@ -101,69 +83,65 @@ function Contact() {
       <div className="w-full max-w-7xl mx-auto px-6 sm:px-8 md:px-10 py-12 sm:py-16">
         <div className="flex flex-col md:flex-row gap-8 md:gap-12">
           <div className="w-full md:w-1/2 flex flex-col">
-            <h1
-              style={{ fontFamily: "Arsenica" }}
-              className="text-4xl sm:text-5xl md:text-6xl font-serif font-medium text-gray-900"
-            >
-              Contact Me
-            </h1>
-
-            <p
-              style={{ fontFamily: "Afacad" }}
-              className="text-black/80 mb-6"
-            >
-              Let's connect! Reach out through the form or social media.
-            </p>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-medium text-gray-900" style={{ fontFamily: "Arsenica" }}>Contact Me</h1>
+            <p className="text-black/80 mb-6" style={{ fontFamily: "Afacad" }}>Let's connect! Reach out through the form or social media.</p>
 
             <div className="flex gap-3 mb-6">
               {[Mail, Phone, Linkedin, Instagram, Twitter].map((Icon, index) => (
-                <a
-                  key={index}
-                  href="#"
-                  className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100/80 hover:bg-blue-200 transition-colors duration-300"
-                >
+                <a key={index} href="#" className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100/80 hover:bg-blue-200 transition-colors duration-300">
                   <Icon size={18} className="text-blue-600" />
                 </a>
               ))}
             </div>
 
-            <form
-              onSubmit={sendEmail}
-              className="w-full space-y-4"
-              style={{ fontFamily: "Afacad" }}
-            >
+            <form onSubmit={sendEmail} className="w-full space-y-4" style={{ fontFamily: "Afacad" }}>
               <div className="flex flex-col sm:flex-row gap-4">
                 <input
                   type="text"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
                   placeholder="First Name*"
-                  className="w-full h-12 px-4  border border-gray-300 focus:border-blue-400 focus:ring-2 focus:ring-blue-200 focus:outline-none rounded-md transition-all duration-200"
                   required
+                  className="w-full h-12 px-4 border border-gray-300 focus:border-blue-400 focus:ring-2 focus:ring-blue-200 focus:outline-none rounded-md transition-all duration-200"
                 />
                 <input
                   type="text"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
                   placeholder="Last Name*"
-                  className="w-full h-12 px-4  border border-gray-300 focus:border-blue-400 focus:ring-2 focus:ring-blue-200 focus:outline-none rounded-md transition-all duration-200"
                   required
+                  className="w-full h-12 px-4 border border-gray-300 focus:border-blue-400 focus:ring-2 focus:ring-blue-200 focus:outline-none rounded-md transition-all duration-200"
                 />
               </div>
 
               <input
                 type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
                 placeholder="Email Address*"
-                className="w-full h-12 px-4  border border-gray-300 focus:border-blue-400 focus:ring-2 focus:ring-blue-200 focus:outline-none rounded-md transition-all duration-200"
                 required
+                className="w-full h-12 px-4 border border-gray-300 focus:border-blue-400 focus:ring-2 focus:ring-blue-200 focus:outline-none rounded-md transition-all duration-200"
               />
 
               <input
                 type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
                 placeholder="Phone Number"
-                className="w-full h-12 px-4  border border-gray-300 focus:border-blue-400 focus:ring-2 focus:ring-blue-200 focus:outline-none rounded-md transition-all duration-200"
-                />
+                className="w-full h-12 px-4 border border-gray-300 focus:border-blue-400 focus:ring-2 focus:ring-blue-200 focus:outline-none rounded-md transition-all duration-200"
+              />
 
               <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
                 placeholder="Your Message*"
-                  className="w-full h-32 px-4  border border-gray-300 focus:border-blue-400 focus:ring-2 focus:ring-blue-200 focus:outline-none rounded-md transition-all duration-200"
                 required
+                className="w-full lg:h-70 md:h-30 sm:h-32 h-32 px-4 border border-gray-300 focus:border-blue-400 focus:ring-2 focus:ring-blue-200 focus:outline-none rounded-md transition-all duration-200"
               />
 
               <button
@@ -186,23 +164,6 @@ function Contact() {
             </div>
           </div>
         </div>
-      </div>
-
-      <div
-        style={{ fontFamily: "Afacad" }}
-        className="flex justify-center py-2 mt-auto"
-      >
-        <span className="bg-black px-2 py-1 text-[14px] text-white">
-          © Phoebe Kardita, 2025 built by
-          <a
-            href="https://swarui.netlify.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline ml-1"
-          >
-            this guy
-          </a>
-        </span>
       </div>
     </section>
   );
