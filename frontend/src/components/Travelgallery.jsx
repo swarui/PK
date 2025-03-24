@@ -89,7 +89,7 @@ function TravelGallery() {
         </motion.div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10">
+        <div className="grid grid-cols-1 md:grid-col-1 sm:grid-cols-2 gap-8 md:gap-10">
           {images.map((image, index) => (
             <motion.div
               key={index}
