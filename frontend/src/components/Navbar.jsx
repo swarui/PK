@@ -120,11 +120,7 @@ function Navbar() {
                   }`}
                 >
                   {item.name}
-                  <span
-                    className={`absolute bottom-0 left-0 w-full h-0.5 bg-sky-700 dark:bg-sky-400 transform origin-left transition-transform duration-300 ${
-                      activeSection === item.href.substring(1) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
-                    }`}
-                  />
+                 
                 </a>
               </li>
             ))}
@@ -134,7 +130,7 @@ function Navbar() {
         {/* Email Me Button */}
         <div className="hidden lg:block">
           <a
-            href="mailto:contact@example.com"
+            href="mailto:kahawake@gmail.com"
             style={{ fontFamily: "Afacad" }}
             className="bg-black dark:bg-white text-white dark:text-black transition duration-500 hover:bg-sky-700 dark:hover:bg-sky-400 hover:text-white rounded-full px-5 py-2 shadow-lg text-[0.945em] inline-flex items-center gap-2"
           >
@@ -178,11 +174,7 @@ function Navbar() {
                     }`}
                   >
                     {item.name}
-                    <span
-                      className={`absolute -bottom-1 left-4 right-4 h-0.5 bg-sky-300 transform origin-left transition-transform duration-300 ${
-                        activeSection === item.href.substring(1) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
-                      }`}
-                    />
+                  
                   </a>
                 </li>
               ))}
