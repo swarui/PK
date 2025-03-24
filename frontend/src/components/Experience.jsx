@@ -112,7 +112,7 @@ function ExperienceCard({ experience, index, isVisible }) {
           </div>
 
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mt-1">
-            <p className="text-blue-600 font-medium text-base md:text-lg">{experience.position}</p>
+            <p className="text-blue-600 font-regular text-base md:text-lg">{experience.position}</p>
             <div className="flex items-center text-gray-500 text-sm mt-2 sm:mt-0">
               <Calendar size={16} className="mr-2" />
               {experience.date}
@@ -131,7 +131,7 @@ function ExperienceCard({ experience, index, isVisible }) {
         {hasMoreItems && (
           <button
             onClick={() => setExpanded(!expanded)}
-            className="mt-4 text-blue-600 hover:text-blue-800 flex items-center text-base font-medium bg-transparent border-none cursor-pointer px-2 py-1"
+            className="mt-4 text-blue-600 hover:text-blue-800 flex items-center text-base font-regular bg-transparent border-none cursor-pointer px-2 py-1"
           >
             {expanded ? (
               <>
