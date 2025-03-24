@@ -215,7 +215,7 @@ function Experience() {
             animate={{ opacity: isVisible ? 1 : 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             style={{ fontFamily: "Afacad" }}
-            className="text-blue-800 text-base md:text-lg lg:text-xl mt-2"
+            className="text-blue-800 text-base lg:text-lg  mt-2"
           >
             <span className="relative inline-block">
               Experience{" "}

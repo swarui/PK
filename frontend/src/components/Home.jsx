@@ -77,12 +77,18 @@ function Home() {
             transition={{ duration: 0.5, delay: 0.8 }}
             className="flex gap-3 sm:gap-4 lg:gap-5 mt-3 sm:mt-4 lg:mt-6"
           >
+            <a
+            href="https://drive.google.com/file/d/1817zmKGLK11sLrLUtQ6tgmCtQ6Jkq63m/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <button
               style={{ fontFamily: "Afacad" }}
               className="bg-blue-400 text-white text-sm sm:text-base lg:text-lg px-5 sm:px-6 py-2.5 lg:px-10 rounded-md hover:bg-blue-500 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 flex items-center justify-center"
             >
               Resume
             </button>
+            </a>
             <button
               style={{ fontFamily: "Afacad" }}
               className="border-2 border-blue-400 text-sm sm:text-base lg:text-lg text-black px-5 sm:px-6 py-2.5 lg:px-10 rounded-md hover:border-blue-500 hover:text-blue-600 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 flex items-center justify-center"
