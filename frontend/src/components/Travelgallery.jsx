@@ -67,12 +67,12 @@ function TravelGallery() {
         >
           <h1
             style={{ fontFamily: "Arsenica" }}
-            className="text-4xl sm:text-5xl md:text-6xl font-serif font-medium  text-black relative inline-block"
+            className="text-4xl sm:text-5xl md:text-5xl font-serif font-medium  text-black relative inline-block"
           >
             Travel Gallery <span className="text-blue-400">:)</span>
             <span className="absolute bottom-2 left-0 w-full h-2 bg-blue-200/50 -z-10 transform -rotate-1"></span>
           </h1>
-          <h2 style={{ fontFamily: "Afacad" }} className="text-blue-800 text-base lg:text-lg mt-2">
+          <h2 style={{ fontFamily: "Afacad" }} className="text-blue-800 text-base lg:text-lg lg:mt-2">
 Work Visits          </h2>
         </motion.div>
 

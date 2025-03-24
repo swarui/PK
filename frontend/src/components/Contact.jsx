@@ -83,14 +83,14 @@ function Contact() {
       <div className="w-full max-w-7xl mx-auto px-6 sm:px-8 md:px-10 py-12 sm:py-16">
         <div className="flex flex-col md:flex-row gap-8 md:gap-12">
           <div className="w-full md:w-1/2 flex flex-col">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-medium text-gray-900" style={{ fontFamily: "Arsenica" }}>Contact Me</h1>
+            <h1 className="text-4xl sm:text-5xl md:text-5xl font-serif font-medium text-gray-900" style={{ fontFamily: "Arsenica" }}>Contact Me</h1>
             <p className="text-black/80 mb-6" style={{ fontFamily: "Afacad" }}>Let's connect! Reach out through the form or social media.</p>
 
             <div className="flex gap-3 mb-6">
   {[
     { Icon: Mail, link: "mailto:phoebekardita@gmail.com" },
-    { Icon: Linkedin, link: "https://linkedin.com/in/yourprofile" },
-    { Icon: Instagram, link: "https://instagram.com/yourprofile" },
+    { Icon: Linkedin, link: "https://www.linkedin.com/in/phoebe-kardita-4342892a7/" },
+    { Icon: Instagram, link: "https://www.instagram.com/kardita_phoebe/" },
     { Icon: Twitter, link: "https://twitter.com/yourprofile" },
   ].map(({ Icon, link }, index) => (
     <a

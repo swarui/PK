@@ -201,10 +201,10 @@ function Experience() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="relative inline-block">
+          <div className="lg:mt-10 relative inline-block">
             <h1
               style={{ fontFamily: "Arsenica", fontWeight: "500" }}
-              className="text-4xl md:text-5xl lg:text-6xl text-black"
+              className="text-4xl md:text-5xl lg:text-5xl text-black"
             >
               Work Journey{" "}
             </h1>
@@ -215,7 +215,7 @@ function Experience() {
             animate={{ opacity: isVisible ? 1 : 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             style={{ fontFamily: "Afacad" }}
-            className="text-blue-800 text-base lg:text-lg  mt-2"
+            className="text-blue-800 text-base lg:text-lg  lg:mt-2"
           >
             <span className="relative inline-block">
               Experience{" "}
