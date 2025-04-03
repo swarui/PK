@@ -31,7 +31,7 @@ function Contact() {
     setIsSending(true);
 
     try {
-      const response = await fetch("https://kahawakedualboot1.onrender.com/contact", {
+      const response = await fetch("https://pkdualboot.onrender.com/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
